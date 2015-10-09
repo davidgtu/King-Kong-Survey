@@ -32,3 +32,9 @@ post '/login' do
     redirect '/login'
   end
 end
+
+get '/logout' do
+  session.clear
+  #flash msg for logout
+  redirect '/'
+end
