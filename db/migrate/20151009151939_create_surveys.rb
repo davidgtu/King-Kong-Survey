@@ -3,7 +3,7 @@ class CreateSurveys < ActiveRecord::Migration
     create_table :surveys do |t|
       t.string :title, null:false
       t.string :about, null:false
-      t.belongs_to :author_id
+      t.belongs_to :author
 
       t.timestamps null:false
     end
