@@ -8,7 +8,7 @@ get "/survey/:survey_id/questions/new" do
   erb :"questions/new"
 end
 
-post "/questions" dos
+post "/questions" do
   @question = Question.new(params[:question])
     if @question.save
       redirect "/"
