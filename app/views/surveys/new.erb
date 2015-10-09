@@ -1,0 +1,6 @@
+<form method="post" action="/surveys">
+    <label for="title">Title:</label>
+    <input id="title" name="survey[:title]" value="<%= @survey.title %>"></input>
+    <label for="about">Description:</label>
+    <textarea id="about" name="survey[:about]" rows="10" cols="50"><%= @survey.about %></textarea>
+</form>
