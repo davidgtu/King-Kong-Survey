@@ -4,7 +4,9 @@ get "/questions/:id" do |id|
 end
 
 get "/survey/:survey_id/questions/new" do
-  @question = Question.new
+  @user = User.find(session[:user_id])
+  @survey = @user.surveys.find(params[:survey_id])
+  @question = @survey.questions.new
   erb :"questions/new"
 end
 
