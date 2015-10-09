@@ -1,8 +1,11 @@
 
 <section>
   <div>
-    <% @surveys.each do |survey| %>
-    <%= survey %>
+    <ul>
+      <% @surveys.each do |survey| %>
+      <li><%= survey.title %></li>
+      <% end %>
+    </ul>
   </div>
 </section>
 
