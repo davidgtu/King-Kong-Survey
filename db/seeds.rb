@@ -1,6 +1,6 @@
 User.create ([
-  {name: "Clock", password: "watch"},
-  {name: "Lebron", password: "james"}])
+  {name: "Clock", password_hash: "watch"},
+  {name: "Lebron", password_hash: "james"}])
 
 Survey.create ([
   {author_id: 1, title: "Baby Names", about: "This is a survey about baby names! ;)"},
@@ -12,16 +12,16 @@ Question.create ([
   {survey_id: 2, prompt: "What street address do you prefer?"},
   {survey_id: 2, prompt: "What zip code do you like?"}])
 
-Choices.create ([
-  {question_id: 1, content: FAKER::Name.name},
-  {question_id: 1, content: FAKER::Name.name},
-  {question_id: 1, content: FAKER::Name.name},
-  {question_id: 2, content: FAKER::Name.name},
-  {question_id: 2, content: FAKER::Name.name},
-  {question_id: 2, content: FAKER::Name.name},
-  {question_id: 3, content: FAKER::Address.street_name},
-  {question_id: 3, content: FAKER::Address.street_name},
-  {question_id: 3, content: FAKER::Address.street_name},
-  {question_id: 4, content: FAKER::Address.zip},
-  {question_id: 4, content: FAKER::Address.zip},
-  {question_id: 4, content: FAKER::Address.zip}])
+Choice.create ([
+  {question_id: 1, content: Faker::Name.name},
+  {question_id: 1, content: Faker::Name.name},
+  {question_id: 1, content: Faker::Name.name},
+  {question_id: 2, content: Faker::Name.name},
+  {question_id: 2, content: Faker::Name.name},
+  {question_id: 2, content: Faker::Name.name},
+  {question_id: 3, content: Faker::Address.street_name},
+  {question_id: 3, content: Faker::Address.street_name},
+  {question_id: 3, content: Faker::Address.street_name},
+  {question_id: 4, content: Faker::Address.zip},
+  {question_id: 4, content: Faker::Address.zip},
+  {question_id: 4, content: Faker::Address.zip}])
