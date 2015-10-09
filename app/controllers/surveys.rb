@@ -3,14 +3,15 @@ get "/surveys" do
   erb :"surveys/index"
 end
 
-get "/surveys/:id" do |id|
-  @survey = find(id)
-  erb :"surveys/show"
-end
 
 get "/surveys/new" do
   @survey = Survey.new #--> placeholder for form
   erb :"surveys/new"
+end
+
+get "/surveys/:id" do |id|
+  @survey = find(id)
+  erb :"surveys/show"
 end
 
 post "/surveys" do
