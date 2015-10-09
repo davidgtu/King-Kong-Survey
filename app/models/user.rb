@@ -1,3 +1,5 @@
 class User < ActiveRecord::Base
-  # Remember to create a migration!
+  has_many :user_surveys
+  has_many :responses
+  has_many :surveys, foreign_key: :author_id
 end
