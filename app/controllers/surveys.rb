@@ -7,3 +7,18 @@ get "/surveys/:id" do |id|
   @survey = find(id)
   erb :"surveys/show"
 end
+
+get "/surveys/new" do
+  @survey = Survey.new #--> placeholder for form
+  erb :"surveys/new"
+end
+
+post "/surveys" do
+  @survey = Survey.new(params[:survey])
+  if @survey.save
+    redirect "/surveys/#{@survey.id}/questions/new"
+  else
+    @survey.valid? #--> need to call this to get messages for some reason
+    @errors = @survey.errors.full_messages
+  end
+end
