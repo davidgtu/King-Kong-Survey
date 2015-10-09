@@ -8,4 +8,4 @@ As a user, I want to be able to take a survey online- I want to see questions an
 As a user, I want to be able to create a survey, meaning that I want to write my own questions and provide my own options for answer.
 
 Schema:
-![schema.png]
+![](/images/schema.png)
