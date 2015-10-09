@@ -33,6 +33,11 @@ post '/login' do
   end
 end
 
+get /users/:id do
+  @user = User.find(params[:id])
+  erb :'/users/show'
+end
+
 get '/logout' do
   session.clear
   #flash msg for logout
