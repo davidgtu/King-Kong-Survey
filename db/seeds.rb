@@ -1,6 +1,6 @@
 User.create ([
-  {name: "Clock", password_hash: "watch"},
-  {name: "Lebron", password_hash: "james"}])
+  {username: "Clock", password: "watch"},
+  {username: "Lebron", password: "james"}])
 
 Survey.create ([
   {author_id: 1, title: "Baby Names", about: "This is a survey about baby names! ;)"},
