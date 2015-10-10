@@ -4,6 +4,12 @@
     <% @surveys.each do |survey| %>
       <li><%= survey.title %></li>
     <% end %>
+    <br>
+    <% if logged_in? %>
+      <li><a href='/surveys/new'>Create survey</a><li>
+    <% else %>
+      <li><a href='/register'>Create survey</a><li>
+    <% end %>
     </ul>
   </div>
 </section>
