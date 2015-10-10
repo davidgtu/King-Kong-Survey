@@ -18,23 +18,26 @@
   <title>King Kong Survey</title>
 </head>
 <body>
-  <div id="nav-bar">
-    <div class="center">
-      <img id="icon" src="/imgs/gorilla_icon.gif"/>
-      <a class="header-title" href="/">King Kong Survey</a>
-      <ul>
-        <% if logged_in? %>
-          <li><a href="/users/<%= current_user.id %>">Your Profile</a></li>
-          <li><a href="/logout">Log Out</a></li>
-        <% else %>
-          <li><a href="/login">login</a></li>
-          <li><a href="/register">register</a></li>
-        <% end %>
-      </ul>
+  <div class="wrapper">
+    <div id="nav-bar">
+      <div class="center">
+        <img id="icon" src="/imgs/gorilla_icon.gif"/>
+        <a class="header-title" href="/">King Kong Survey</a>
+        <ul>
+          <% if logged_in? %>
+            <li><a href="/users/<%= current_user.id %>">Your Profile</a></li>
+            <li><a href="/logout">Log Out</a></li>
+          <% else %>
+            <li><a href="/login">login</a></li>
+            <li><a href="/register">register</a></li>
+          <% end %>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div id="content">
-    <%= yield %>
+    <div id="content">
+      <%= yield %>
+      <div class="push"></div>
+    </div>
   </div>
   <footer>
     <div class="center">
