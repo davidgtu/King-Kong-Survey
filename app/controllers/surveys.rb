@@ -10,7 +10,7 @@ get "/surveys/new" do
 end
 
 get "/surveys/:id" do |id|
-  @survey = find(id)
+  @survey = Survey.find(id)
   erb :"surveys/show"
 end
 
