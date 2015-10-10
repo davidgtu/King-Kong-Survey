@@ -3,7 +3,7 @@ get "/questions/:id" do |id|
   erb :"questions/show"
 end
 
-get "/survey/:survey_id/questions/new" do
+get "/surveys/:survey_id/questions/new" do
   @user = User.find(session[:user_id])
   @survey = @user.surveys.find(params[:survey_id])
   @question = @survey.questions.new
