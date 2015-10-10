@@ -33,6 +33,5 @@ post "/surveys/:id/responses" do
   params[:response].each do |key, value|
     response = Response.create(choice_id: value, user_id: user)
   end
-  binding.pry
   redirect "/"
 end
