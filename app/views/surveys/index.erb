@@ -4,7 +4,7 @@
     <% @surveys.each do |survey| %>
       <li><a href="/surveys/<%= survey.id %>"><%= survey.title %></a></li>
     <% end %>
-    
+
     <% if logged_in? %>
       <li><a href='/surveys/new'>Create survey</a><li>
     <% else %>
