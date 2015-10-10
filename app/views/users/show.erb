@@ -4,12 +4,12 @@
     <ul>
       <h3>Surveys created by <%= @user.username %><h3>
       <% @surveys_written.each do |written| %>
-          <p><a href="/users/<%= @user.id %>/surveys/<%= written.id %>"><%= written.title %></a></p>
+          <p><a href="/surveys/<%= written.id %>"><%= written.title %></a></p>
         <% end %>
       </br>
       <h3>Surveys taken by <%= @user.username %><h3>
         <% @surveys_taken.each do |taken| %>
-          <p><a href="/users/<%= @user.id %>/surveys/<%= taken.id %>"><%= taken.title %></a></p>
+          <p><%= taken.title %></p>
         <% end %>
 
     </ul>
