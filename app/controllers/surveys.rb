@@ -11,7 +11,6 @@ end
 
 get "/surveys/:id" do
   @survey = Survey.find(params[:id])
-  @question = @survey.questions.find(params[:id])
   erb :"surveys/show"
 end
 

@@ -4,9 +4,9 @@ get "/surveys/:survey_id/questions/new" do
   erb :"questions/new"
 end
 
-get "/surveys/:survey_id/questions/:id" do |survey_id, id|
+get "/surveys/:survey_id/questions" do |survey_id|
   @survey = Survey.find(survey_id)
-  @question = @survey.questions.find(id)
+  @question = @survey.questions
   erb :"questions/show"
 end
 
