@@ -23,12 +23,12 @@
       <img id="icon" src="imgs/gorilla_icon.gif"/>
       <a class="header-title" href="/">King Kong Survey</a>
       <ul>
-        <% if current_user %>
-          <li><a href="/login">login</a></li>
-          <li><a href="/register">register</a></li>
-        <% else %>
+        <% if logged_in? %>
           <li><a href="/">Your Profile</a></li>
           <li><a href="/logout">Log Out</a></li>
+        <% else %>
+          <li><a href="/login">login</a></li>
+          <li><a href="/register">register</a></li>
         <% end %>
       </ul>
     </div>
