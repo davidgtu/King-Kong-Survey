@@ -4,14 +4,14 @@ get "/questions/:id" do |id|
 end
 
 get "/surveys/:survey_id/questions/new" do
-  @user = User.find(session[:user_id])
-  @survey = @user.surveys.find(params[:survey_id])
+  @survey = Survey.find(params[:survey_id])
   @question = @survey.questions.new
   erb :"questions/new"
 end
 
-post "/questions" do
-  @question = Question.new(params[:question])
+post "/surveys/:survey_id/questions" do
+  @survey = Survey.find(params[:survey_id])
+  @question = @survey.questions.new(params[:question])
     if @question.save
       redirect "/"
     else
