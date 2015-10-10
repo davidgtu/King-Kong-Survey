@@ -16,7 +16,9 @@ end
 
 post "/surveys" do
   @survey = Survey.new(params[:survey])
-  if @survey.save
+  @survey.author_id = current_user.id
+
+  if @survey.save!
     redirect "/surveys/#{@survey.id}/questions/new"
   else
     @survey.valid? #--> need to call this to get messages for some reason
