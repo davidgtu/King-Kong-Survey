@@ -1,5 +1,6 @@
-get "/questions/:id" do |id|
-  @question = Question.find(id)
+get "/surveys/:survey_id/questions/:id" do |survey_id, id|
+  @survey = Survey.find(survey_id)
+  @question = @survey.questions.find(id)
   erb :"questions/show"
 end
 

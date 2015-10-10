@@ -1,5 +1,13 @@
-<h4><%= @question.prompt%></h4>
+<h4><%= @survey.title %></h4>
 
-
-<br>
-<h4><%= @question.get_choices%></h4>
+<form action="/surveys/<%= @survey.id %>/responses" method="post">
+  <% @survey.questions.each do |question| %>
+    <h3><%= question.prompt %></h3>
+    <% question.choices.each do |choice| %>
+      <input type="radio" name="response[<%= question.id %>]" value="<%= choice.id %>"><%= choice.content %><br>
+    <% end %>
+    <br>
+  <% end %>
+  <br>
+  <input type="submit" value="Submit"/>
+</form>

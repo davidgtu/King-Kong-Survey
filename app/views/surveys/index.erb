@@ -2,14 +2,14 @@
   <div>
     <ul>
     <% @surveys.each do |survey| %>
-      <li><%= survey.title %></li>
+      <li><a href="/surveys/<%= survey.id %>"><%= survey.title %></a></li>
     <% end %>
-    <br>
+
     <% if logged_in? %>
       <li><a href='/surveys/new'>Create survey</a><li>
     <% else %>
       <li><a href='/register'>Create survey</a><li>
     <% end %>
-    </ul>
+  </ul>
   </div>
 </section>
