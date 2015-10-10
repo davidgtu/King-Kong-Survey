@@ -1,10 +1,11 @@
 <section>
   <div>
     <ul>
-    <% @surveys.each do |survey| %>
-      <li><%= survey.title %></li>
-    <% end %>
     <br>
+    <% @surveys.each do |survey| %>
+      <li><a href="/surveys/show"><%= survey.title %></a></li>
+    <% end %>
+
     <% if logged_in? %>
       <li><a href='/surveys/new'>Create survey</a><li>
     <% else %>
