@@ -1,10 +1,14 @@
 <section>
-  <a href="/register">Register</a> | <a href="/login">Log in</a>
   <div>
     <ul>
-      <% @surveys.each do |survey| %>
+  <% if current_user %>
+    <a href="/logout">Logout</a>
+    <% @surveys.each do |survey| %>
       <li><%= survey.title %></li>
-      <% end %>
+    <% end %>
+  <% else %>
+    <a href="/register">Register</a> | <a href="/login">Log in</a>
+  <% end %>
     </ul>
   </div>
 </section>
