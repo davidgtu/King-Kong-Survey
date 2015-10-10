@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   has_many :surveys, through: :user_surveys
   has_many :responses
 
-  validates_presence_of :username,
+  validates_presence_of :username
   #:password-- Validating in views/users/new.
 
   include BCrypt
