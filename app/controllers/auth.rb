@@ -15,6 +15,7 @@ post '/users' do
   end
 end
 
+
 get '/login' do
   @user = User.new
   erb :'/users/login'
@@ -38,3 +39,4 @@ get '/logout' do
   #flash msg for logout
   redirect '/'
 end
+
