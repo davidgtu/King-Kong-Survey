@@ -24,7 +24,7 @@
       <a class="header-title" href="/">King Kong Survey</a>
       <ul>
         <% if logged_in? %>
-          <li><a href="/">Your Profile</a></li>
+          <li><a href="/users/<%= current_user.id %>">Your Profile</a></li>
           <li><a href="/logout">Log Out</a></li>
         <% else %>
           <li><a href="/login">login</a></li>
