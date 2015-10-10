@@ -1,6 +1,11 @@
+<% if @survey.questions.count > 0 %>
+  <a href="/">Finished</a>
+<% end %>
+
+<h3>Make a New</h3>
 <form action="/surveys/<%= @survey.id %>/questions" method="post">
   <label for="question">Your question:</label>
-  <input type="text" name="question[prompt]"/>
+  <input type="text" name="question[prompt]"/></br>
+  <%= erb :"choices/new" %>
+  <input type="submit" value="Make Question">
 </form>
-
-<%= erb :"choices/new" %>
