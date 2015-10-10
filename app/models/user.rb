@@ -3,8 +3,8 @@ class User < ActiveRecord::Base
   has_many :surveys, through: :user_surveys
   has_many :responses
 
-  validates :username, presence: true
-  validates :password, length: { in: 3..20 }
+  validates_presence_of :username,
+  #:password-- Validating in views/users/new.
 
   include BCrypt
 
