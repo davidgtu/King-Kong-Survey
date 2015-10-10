@@ -9,8 +9,9 @@ get "/surveys/new" do
   erb :"surveys/new"
 end
 
-get "/surveys/:id" do |id|
-  @survey = Survey.find(id)
+get "/surveys/:id" do
+  @survey = Survey.find(params[:id])
+  @question = @survey.questions.find(params[:id])
   erb :"surveys/show"
 end
 
@@ -24,4 +25,14 @@ post "/surveys" do
     @survey.valid? #--> need to call this to get messages for some reason
     @errors = @survey.errors.full_messages
   end
+end
+
+post "/surveys/:id/responses" do
+  survey = Survey.find(params[:id])
+  user = session[:user_id]
+  params[:response].each do |key, value|
+    response = Response.create(choice_id: value, user_id: user)
+  end
+  binding.pry
+  redirect "/"
 end
