@@ -1,12 +1,9 @@
 <section>
   <div>
     <ul>
-  <% if current_user %>
     <% @surveys.each do |survey| %>
       <li><%= survey.title %></li>
     <% end %>
-  <% else %>
-  <% end %>
     </ul>
   </div>
 </section>
