@@ -9,8 +9,9 @@ get "/surveys/new" do
   erb :"surveys/new"
 end
 
-get "/surveys/:id" do |id|
-  @survey = Survey.find(id)
+get "/surveys/:survey_id" do
+  @survey = Survey.find(params[:survey_id])
+  @question = @survey.questions.find(params[:id])
   erb :"surveys/show"
 end
 
