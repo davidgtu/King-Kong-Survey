@@ -19,7 +19,8 @@
       <li>
     <% else %>
       <li class="survey-list">
-        <a href='/register'>
+          <% flash[:error] = "You must be logged in to make a survey." %>
+        <a href='/login'>
           <%= erb :"surveys/_create_survey" %>
         </a>
       <li>
