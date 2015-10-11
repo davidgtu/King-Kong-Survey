@@ -18,6 +18,7 @@ post "/surveys/:survey_id/questions" do
   choices = question.choices.new(params[:choice3])
 
     if question.save
+      flash[:success] = "Questions created!"
       redirect "/surveys/#{@survey.id}/questions/new"
     else
       question.valid?
