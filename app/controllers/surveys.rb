@@ -32,5 +32,6 @@ post "/surveys/:id/responses" do
   params[:response].each do |key, value|
     response = Response.create(choice_id: value, user_id: user)
   end
+  flash[:success] = "Thank you for your responses!"
   redirect "/"
 end

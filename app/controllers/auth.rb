@@ -7,10 +7,10 @@ post '/users' do
   user = User.new(params[:user])
   if user.save
     session[:user_id] = user.id
-    #flash message for success
+    flash[:success] = "Account Created!"
     redirect '/'
   else
-    #flash message for error
+    flash[:error] = "Could not create account."
     redirect '/'
   end
 end
@@ -26,17 +26,16 @@ post '/login' do
   user = User.find_by(username: user_params[:username])
   if user && user.password == user_params[:password]
     session[:user_id] = user.id
-    #flash login success
+    flash[:success] = "Logged in as #{user.username}. Welcome!"
     redirect '/'
   else
-    #flash login error
+    flash[:error] = "Mismatched username/password."
     redirect '/login'
   end
 end
 
 get '/logout' do
   session.clear
-  #flash msg for logout
+  flash[:success] = "Logged out of King Kong. :("
   redirect '/'
 end
-

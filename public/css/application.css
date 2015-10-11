@@ -75,6 +75,32 @@ html, body {
     margin: 0 auto -90px;
 }
 
+#flash-area {
+  height:5em;
+  position: relative;
+  width: 15%;
+  margin: 0 auto;
+  /*padding: 5px 10px 10px 5px;*/
+}
+
+.flash-success {
+  background-color: #2ECC71;
+  padding: 2px 7px 2px 7px;
+  display:inline-block;
+  border-radius:25px;
+}
+
+.flash-error {
+  background-color: #F22613;
+  padding: 2px 7px 2px 7px;
+  display:inline-block;
+  border-radius:25px;
+}
+
+.flash-text {
+  color: #fff
+}
+
 ul {
     list-style-type: none;
     font-size: 1.5em;

@@ -16,6 +16,7 @@ gem 'rake'
 gem 'shotgun'
 gem 'bcrypt'
 gem 'pry'
+gem 'sinatra-flash'
 
 group :test do
   gem 'database_cleaner', '~> 1.4.1'
