@@ -12,14 +12,16 @@ $(document).ready(function() {
   surveyForm.on("submit", function(event) {
     event.preventDefault();
     var url = $(this).attr("action");
-    var data = $(this).serialize;
     var type = $(this).attr("method");
+    var data = $(this).serialize();
+    debugger;
     $.ajax({
       url: url,
-      data: data,
-      type: type
+      type: type,
+      data: data
     })
     .done(function(data) {
+      $("#survey").append(data);
       debugger;
     })
     .fail();
