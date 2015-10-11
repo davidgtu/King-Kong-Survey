@@ -86,14 +86,14 @@ html, body {
 .flash-success {
   background-color: #2ECC71;
   padding: 2px 7px 2px 7px;
-  display:inline-block;
+  display:none;
   border-radius:25px;
 }
 
 .flash-error {
   background-color: #F22613;
   padding: 2px 7px 2px 7px;
-  display:inline-block;
+  display: none;
   border-radius:25px;
 }
 
