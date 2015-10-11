@@ -29,9 +29,10 @@ post "/surveys" do
         redirect "/surveys/#{@survey.id}/questions/new"
       end
   else
-      @survey.valid? #--> need to call this to get messages for some reason
-      @errors = @survey.errors.full_messages
-  erb :"surveys/new"
+    @survey.valid? #--> need to call this to get messages for some reason
+    @errors = @survey.errors.full_messages
+    erb :"surveys/new"
+  end
 end
 
 post "/surveys/:id/responses" do

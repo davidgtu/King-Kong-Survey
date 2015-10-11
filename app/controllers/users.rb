@@ -1,3 +1,4 @@
+require 'pry'
 get '/users/:id' do
   if !current_user
     flash[:error] = "You must be logged in or have an account."
@@ -6,7 +7,7 @@ get '/users/:id' do
     @surveys_written = Survey.where(author_id: @user.id)
 
     @surveys_taken = @user.responses.map do |response|
-      response.choice
+      response.get_question
     end.uniq!
     erb :'/users/show'
   end

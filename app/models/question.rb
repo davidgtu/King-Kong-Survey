@@ -7,4 +7,8 @@ class Question < ActiveRecord::Base
   def get_choices
     self.choices.map{ |choice| "<p>" + choice.content + "</p>" }.join(" ")
   end
+
+   def get_title
+    self.survey.title
+  end
 end
