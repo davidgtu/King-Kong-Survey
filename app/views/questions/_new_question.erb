@@ -1,7 +1,8 @@
 <form class="new-question" action="/surveys/<%= @survey.id %>/questions" method="post">
+  <h5>Create as many survey questions as you like below:</h5>
   <label for="question">Question:</label>
   <input type="text" name="question[prompt]"/></br>
   <%= erb :"choices/new" %>
-  <input type="submit" value="Add Question">
-  <input type="submit" value="Add &amp; Complete Survey">
+  <input id="add" type="submit" value="Add Question">
+  <button id="complete" type="button" value="Add &amp; Complete Survey">Add &amp; Complete Survey</button>
 </form>
