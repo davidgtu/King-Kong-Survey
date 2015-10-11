@@ -37,6 +37,9 @@ post "/surveys/:survey_id/questions" do
     else
       question.valid?
       @errors = question.errors.full_messages
+      @errors.each do |error|
+        flash[:error] = "Field(s) can't be blank"
+      end
       erb :"questions/new"
     end
 end
