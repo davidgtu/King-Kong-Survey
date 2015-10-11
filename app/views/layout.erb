@@ -35,6 +35,8 @@
       </div>
     </div>
     <div id="content">
+      <%= flash[:success] %>
+      <%= flash[:error] %>
       <%= yield %>
       <div class="push"></div>
     </div>
