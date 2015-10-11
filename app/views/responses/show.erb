@@ -1,1 +1,7 @@
-Authored by: <%= @user.username %>
+<h3>Stats for your quiz: <%= @survey.title %></h3>
+<% @survey.questions.each do |question| %><br><br>
+  <%= question.prompt %><br>
+  <% question.choices.each do |choice| %><br>
+    <%= choice.content %> | <%= choice.responses.count %> votes
+  <% end %>
+<% end %>

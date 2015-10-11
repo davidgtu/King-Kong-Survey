@@ -4,7 +4,7 @@
     <ul>
       <h5>Surveys created by <%= @user.username %><h5>
       <% @surveys_written.each do |written| %>
-          <p><a href="/surveys/<%= written.id %>"><%= written.title %></a></p>
+          <p><a href="/surveys/<%= written.id %>/responses"><%= written.title %></a></p>
         <% end %>
       </br>
       <h5>Surveys taken by <%= @user.username %><h5>
@@ -13,4 +13,3 @@
     </ul>
   </div>
 </section>
-
