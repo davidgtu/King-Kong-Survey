@@ -1,13 +1,23 @@
 get "/surveys/:survey_id/questions/new" do
-  @survey = Survey.find(params[:survey_id])
-  question = @survey.questions.new
-  erb :"questions/new"
+  if !current_user
+    flash[:error] = "You must log in to create a new survey."
+    redirect "/"
+  else
+    @survey = Survey.find(params[:survey_id])
+    question = @survey.questions.new
+    erb :"questions/new"
+  end
 end
 
 get "/surveys/:survey_id/questions" do |survey_id|
-  @survey = Survey.find(survey_id)
-  @question = @survey.questions
-  erb :"questions/show"
+  if !logged_in?
+    flash[:error] = "You must be logged in to play."
+    redirect '/'
+  else
+    @survey = Survey.find(survey_id)
+    @question = @survey.questions
+    erb :"questions/show"
+  end
 end
 
 post "/surveys/:survey_id/questions" do
