@@ -27,14 +27,17 @@ html, body {
     margin-right: 15px;
     border: 2px solid white;
 }
+#nav-bar a {
+  text-decoration: none;
+}
 
 #nav-bar .header-title {
   position: relative;
+  display: inline;
   font-family: 'Titillium Web', sans-serif;
   font-weight: 700;
   color: white;
   font-size: 2em;
-  text-decoration: none;
   top: -10px;
 }
 
@@ -64,8 +67,12 @@ html, body {
 #content {
   position: relative;
   width: 65%;
-
   margin: 0 auto;
+}
+
+#content h3 {
+  font-size: 2em;
+  font-weight: 700;
 }
 
 .wrapper {
