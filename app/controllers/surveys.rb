@@ -10,8 +10,13 @@ get "/surveys/new" do
 end
 
 get "/surveys/:id" do
-  @survey = Survey.find(params[:id])
-  erb :"surveys/show"
+  if !current_user
+    flash[:error] = "You must be logged in to play."
+    redirect "/"
+  else
+    @survey = Survey.find(params[:id])
+    erb :"surveys/show"
+  end
 end
 
 post "/surveys" do
