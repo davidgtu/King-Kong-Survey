@@ -1,22 +1,27 @@
 * {
-    font-family: 'Titillium Web', sans-serif;
-    font-weight: 400;
-    margin: 0;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 html, body {
-    height: 100%;
+  height: 100%;
 }
 
 #nav-bar {
-    background-color: #403E35;
-    color: white;
-    padding: 10px 0px 10px 0px;
+  background-color: #403E35;
+  color: white;
+  padding: 10px 0px 10px 0px;
 }
 
 .center {
-    width: 65%;
-    margin: 0 auto;
+  width: 65%;
+  margin: 0 auto;
 }
 
 #icon {
@@ -27,101 +32,266 @@ html, body {
     margin-right: 15px;
     border: 2px solid white;
 }
+#nav-bar a {
+  text-decoration: none;
+}
 
 #nav-bar .header-title {
-    position: relative;
-    font-family: 'Titillium Web', sans-serif;
-    font-weight: 700;
-    color: white;
-    font-size: 2em;
-    text-decoration: none;
-    top: -10px;
+  position: relative;
+  display: inline;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 2em;
+  top: -10px;
 }
 
 #nav-bar ul {
-    font-size: 1.25em;
-    display: inline;
-    float: right;
-    padding: 0px 0px 0px 0px;
-    margin: 15px 0px 0px 0px;
+  font-size: 1.25em;
+  display: inline;
+  float: right;
+  padding: 0px 0px 0px 0px;
+  margin: 15px 0px 0px 0px;
 }
 
 #nav-bar li {
-    color: #403E35;
-    display: inline;
-    background-color: yellow;
-    border-radius: .25em;
-    border: 1px solid #C9C90F;
-    padding: 2px 5px;
-    box-shadow: inset 0px 3px 0px #FDFD9B;
+  color: #403E35;
+  display: inline;
+  background-color: yellow;
+  border-radius: .25em;
+  border: 1px solid #C9C90F;
+  padding: 2px 5px;
+  box-shadow: inset 0px 3px 0px #FDFD9B;
 }
 
 #nav-bar li a {
-    color: #403E35;
-    text-decoration: none;
+  color: #403E35;
+  text-decoration: none;
 }
 
-#content {
-    position: relative;
-    width: 65%;
 
-    margin: 0 auto;
+/*---  Main Content ---*/
+
+#content {
+  position: relative;
+  width: 65%;
+  margin: 0 auto;
+}
+
+#content h3 {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+#content h5 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+#content h6 {
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+#content .survey-list h5 {
+  margin: 10px 15px 0px 15px;
+  font-size: 1.5em;
+  font-weight: 700;
+  clear:both;
+}
+
+.survey-list {
+  position: relative;
+  float: left;
+  width: 30%;
+  height: 150px;
+  margin: 10px;
+  border: 1px solid #FAFAFA;
+  border-radius: .25em;
+  box-shadow: 0px 2px 5px #CFCFCF;
+  background-color: white;
+}
+
+.survey-list p {
+  color: #7C7C7C;
+  margin: 5px 10px 0px 15px;
+}
+
+.survey-btn {
+  color: white;
+  width: 40%;
+  margin: 5px 15px;
+  background-color: #2BB8E4;
+  border-radius: .25em;
+  border: 1px solid #3391AE;
+  padding: 2px 5px;
+  box-shadow: inset 0px 3px 0px #80D2EC;
+}
+
+.survey-btn:hover {
+  background-color: #0893BF;
+  border: 1px solid #0F7798;
+  box-shadow: inset 0px 3px 0px #57CCF0;
+}
+
+.create-btn {
+  color: #FFFFFF;
+  width: 40%;
+  margin: 5px 15px;
+  background-color: #FF4963;
+  border-radius: .25em;
+  border: 1px solid #B92E42;
+  padding: 2px 5px;
+  box-shadow: inset 0px 3px 0px #FC7084;
+}
+
+.create-btn:hover {
+  background-color: #CD0E29;
+  border: 1px solid #8D1D2D;
+  box-shadow: inset 0px 3px 0px #F6546B;
+}
+
+.submit-btn {
+  color: white;
+  width: 15%;
+  margin: 15px 0px;
+  background-color: #2BB8E4;
+  border-radius: .25em;
+  border: 1px solid #3391AE;
+  padding: 2px 5px;
+  box-shadow: inset 0px 3px 0px #80D2EC;
+}
+
+.submit-btn:hover {
+  background-color: #0893BF;
+  border: 1px solid #0F7798;
+  box-shadow: inset 0px 3px 0px #57CCF0;
+}
+
+.complete-btn {
+  color: #FFFFFF;
+  width: 15%;
+  margin: 5px 15px;
+  background-color: #FF4963;
+  border-radius: .25em;
+  border: 1px solid #B92E42;
+  padding: 2px 5px;
+  box-shadow: inset 0px 3px 0px #FC7084;
+}
+
+.complete-btn:hover {
+  background-color: #CD0E29;
+  border: 1px solid #8D1D2D;
+  box-shadow: inset 0px 3px 0px #F6546B;
+}
+
+input {
+  margin: 5px 0px;
+}
+
+.line {
+  height:1px;
+  width: 50%;
+  background-color:#2BB8E4;
+  margin: 10px 0px 10px 0px;
+}
+
+#content li a {
+  color: #403E35;
+  text-decoration: none;
+}
+
+#content .user-surveys {
+  width: 50%;
+  height: 90px;
+  margin: 0px 15px 15px 0px;
+  background-color: white;
+  border-radius: .25em;
+  border: 1px solid #FAFAFA;
+  padding: 0px 0px 15px 30px;
+  font-size: .75em;
+  box-shadow: 0px 2px 5px #CFCFCF;
+}
+
+
+#content .user-surveys p {
+  padding: 15px 0px;
+}
+
+#content .user-surveys a {
+  font-size: 1.5em;
+  font-weight: 700;
+  position: relative;
+  top: 15px;
+  color: #403E35;
+  text-decoration: none;
+}
+
+#content .user-surveys a:hover {
+  color: #2BB8E4;
+  font-weight: 700;
+}
+
+#content ul {
+  list-style-type: none;
+  /*font-size: 1.5em;*/
+  padding: 0;
 }
 
 .wrapper {
-    min-height: 100%;
-    height: auto;
-    height: 100%;
-    margin: 0 auto -90px;
+  min-height: 100%;
+  height: auto;
+  height: 100%;
+  margin: 0 auto -90px;
+  background-color: #FAFAFA;
 }
 
 #flash-area {
-  height:5em;
+  height: 3em;
   position: relative;
-  width: 15%;
+  width: 30%;
   margin: 0 auto;
+  padding: 2px 7px 2px 7px;
   /*padding: 5px 10px 10px 5px;*/
 }
 
 .flash-success {
   background-color: #2ECC71;
-  padding: 2px 7px 2px 7px;
+  margin-top: 15px;
   display:none;
-  border-radius:25px;
+  border-radius:.25em;
+  text-align: center;
 }
 
 .flash-error {
   background-color: #F22613;
-  padding: 2px 7px 2px 7px;
+  margin-top: 15px;
   display: none;
-  border-radius:25px;
+  border-radius:.25em;
+  text-align: center;
 }
 
 .flash-text {
   color: #fff
 }
-
-ul {
-    list-style-type: none;
-    font-size: 1.5em;
-}
-
+/*---  Footer Stuff ---*/
 footer, .push{
-    height: 90px;
+  height: 90px;
 }
 
 footer {
-    height: 90px;
-    background-color: #CFCFCF;
-    color:  #403E35;
+  height: 90px;
+  background-color: #CFCFCF;
+  color:  #403E35;
 }
 
 footer a {
-    text-decoration: none;
-    color: #403E35;
-    font-weight: 700;
+  text-decoration: none;
+  color: #403E35;
+  font-weight: 700;
 }
 
 #copyright {
-    text-align: center;
+  padding-top: 15px;
+  text-align: center;
 }

@@ -1,15 +1,30 @@
-<section>
-  <div>
-    <ul>
+<div>
+  <h3>Take a Survey:</h3>
+  <ul>
     <% @surveys.each do |survey| %>
-      <li><a href="/surveys/<%= survey.id %>"><%= survey.title %></a></li>
+      <li class="survey-list">
+        <a href="/surveys/<%= survey.id %>">
+          <h5><%= survey.title %></h5>
+          <p>About: <%= survey.about %></p>
+          <button class="survey-btn">Take Survey</button>
+        </a>
+      </li>
     <% end %>
 
     <% if logged_in? %>
-      <li><a href='/surveys/new'>Create survey</a><li>
+      <li class="survey-list">
+        <a href='/surveys/new'>
+          <%= erb :"surveys/_create_survey" %>
+        </a>
+      <li>
     <% else %>
-      <li><a href='/register'>Create survey</a><li>
+      <li class="survey-list">
+          <% flash[:error] = "You must be logged in to make a survey." %>
+        <a href='/login'>
+          <%= erb :"surveys/_create_survey" %>
+        </a>
+      <li>
     <% end %>
   </ul>
-  </div>
-</section>
+</div>
+

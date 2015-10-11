@@ -1,7 +1,8 @@
-<h3>Stats for your quiz: <%= @survey.title %></h3>
-<% @survey.questions.each do |question| %><br><br>
-  <%= question.prompt %><br>
-  <% question.choices.each do |choice| %><br>
-    <%= choice.content %> | <%= choice.responses.count %> votes
+<h3>Survey Stats for: <%= @survey.title %></h3>
+<% @survey.questions.each do |question| %>
+    <div class="line"></div>
+  <h6><%= question.prompt %></h6>
+  <% question.choices.each do |choice| %>
+    <p><%= choice.content %> | <%= choice.responses.count %> votes</p>
   <% end %>
 <% end %>
