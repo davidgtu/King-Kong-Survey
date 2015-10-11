@@ -44,7 +44,7 @@ function saveQuestion(event) {
     data: data
   })
   .done(function(result) {
-      addQuestionForm(result);
+    addQuestionForm(result);
   })
   .fail();
 }
