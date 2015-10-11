@@ -88,6 +88,11 @@ html, body {
   font-weight: 700;
 }
 
+#content h6 {
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
 #content .survey-list h5 {
   margin: 10px 15px 0px 15px;
   font-size: 1.5em;
@@ -149,6 +154,13 @@ input {
   margin: 5px 0px;
 }
 
+.line {
+  height:1px;
+  width: 50%;
+  background-color:#2BB8E4;
+  margin: 10px 0px 10px 0px;
+}
+
 #content li a {
   color: #403E35;
   text-decoration: none;
@@ -161,11 +173,15 @@ input {
   background-color: white;
   border-radius: .25em;
   border: 1px solid #FAFAFA;
-  padding: 0px 0px 0px 30px;
+  padding: 0px 0px 15px 30px;
   font-size: .75em;
   box-shadow: 0px 2px 5px #CFCFCF;
 }
 
+
+#content .user-surveys p {
+  padding: 15px 0px;
+}
 
 #content .user-surveys a {
   font-size: 1.5em;
