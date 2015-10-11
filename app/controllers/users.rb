@@ -1,4 +1,3 @@
-require 'pry'
 get '/users/:id' do
   if !current_user
     flash[:error] = "You must be logged in or have an account."
