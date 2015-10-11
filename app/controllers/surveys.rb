@@ -11,7 +11,7 @@ end
 
 get "/surveys/:id" do
   if !current_user
-    flash[:error] = "You must be logged in to play."
+    flash[:error] = "You must be logged in to take a survey."
     redirect "/"
   else
     @survey = Survey.find(params[:id])
@@ -29,9 +29,9 @@ post "/surveys" do
         redirect "/surveys/#{@survey.id}/questions/new"
       end
   else
-      @survey.valid? #--> need to call this to get messages for some reason
+      !@survey.valid? #--> need to call this to get messages for some reason
       @errors = @survey.errors.full_messages
-  end
+  erb :"surveys/new"
 end
 
 post "/surveys/:id/responses" do

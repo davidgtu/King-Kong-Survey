@@ -5,11 +5,14 @@
       <h5>Surveys created by <%= @user.username %><h5>
       <% @surveys_written.each do |written| %>
           <p><a href="/surveys/<%= written.id %>/responses"><%= written.title %></a></p>
-        <% end %>
+      <% end %>
       </br>
       <h5>Surveys taken by <%= @user.username %><h5>
+      <% if @surveys_taken %>
         <%= @surveys_taken.join("<p>") %>
-
+      <% else %>
+        <% flash[:error] = "Why not take a survey?" %>
+      <% end %>
     </ul>
   </div>
 </section>

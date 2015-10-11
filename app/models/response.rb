@@ -3,10 +3,10 @@ class Response < ActiveRecord::Base
   belongs_to :choice
 end
 
-# def survey
-#   choice.question.survey
-# end
+def choice
+  choice.question
+end
 
-# def question
-#   choice.question
-# end
+def question
+  question.survey.title
+end
