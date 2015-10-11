@@ -1,18 +1,28 @@
-<section>
-  <div>
-    <h3><%= @user.username %>'s profile page<h3>
+<div>
+  <h3><%= @user.username %>'s profile page<h3>
+    <h5>Surveys created by <%= @user.username %>:<h5>
     <ul>
-      <h5>Surveys created by <%= @user.username %><h5>
-      <% @surveys_written.each do |written| %>
-          <p><a href="/surveys/<%= written.id %>/responses"><%= written.title %></a></p>
-      <% end %>
-      </br>
-      <h5>Surveys taken by <%= @user.username %><h5>
-      <% if @surveys_taken %>
-        <%= @surveys_taken.join("<p>") %>
-      <% else %>
-        <% flash[:error] = "Why not take a survey?" %>
-      <% end %>
+    <% if @surveys_written.nil? %>
+      <li>You've written 0 surveys.</li>
+    <% else %>
+        <% @surveys_written.each do |written| %>
+          <li class="user-surveys">
+            <a href="/surveys/<%= written.id %>/responses"><%= written.title %></a>
+            <p><%= written.created_at.strftime("Created on: %m/%d/%Y, at: %I:%M%p") %></p>
+          </li>
+        <% end %>
+    <% end %>
     </ul>
-  </div>
-</section>
+    <h5>Surveys taken by <%= @user.username %>:<h5>
+    <ul>
+    <% if @surveys_taken.nil? %>
+      <% flash[:error] = "Why not take a survey?" %>
+      <li>You've taken 0 surveys.</li>
+    <% else %>
+        <% @surveys_taken.each do |survey| %>
+            <li class="user-survsys"><%= survey %></li>
+        <% end %>
+    <% end %>
+    </ul>
+</div>
+
