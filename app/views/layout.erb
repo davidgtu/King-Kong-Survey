@@ -21,8 +21,7 @@
   <div class="wrapper">
     <div id="nav-bar">
       <div class="center">
-        <img id="icon" src="/imgs/gorilla_icon.gif"/>
-        <a class="header-title" href="/">King Kong Survey</a>
+        <a href="/"> <img id="icon" src="/imgs/gorilla_icon.gif"/><p class="header-title">King Kong Survey</p></a>
         <ul>
           <% if logged_in? %>
             <li><a href="/users/<%= current_user.id %>">Your Profile</a></li>
