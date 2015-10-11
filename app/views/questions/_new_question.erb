@@ -1,6 +1,7 @@
-<form id="new-question" action="/surveys/<%= @survey.id %>/questions" method="post">
+<form class="new-question" action="/surveys/<%= @survey.id %>/questions" method="post">
   <label for="question">Question:</label>
   <input type="text" name="question[prompt]"/></br>
   <%= erb :"choices/new" %>
-  <input type="submit" value="Make Question">
+  <input type="submit" value="Add Question">
+  <input type="submit" value="Add &amp; Complete Survey">
 </form>
