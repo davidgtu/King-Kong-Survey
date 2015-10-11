@@ -35,7 +35,7 @@ post "/surveys/:survey_id/questions" do
         redirect "/surveys/#{@survey.id}/questions/new"
       end
     else
-      !question.valid?
+      question.valid?
       @errors = question.errors.full_messages
       @errors.each do |error|
         flash[:error] = "Field(s) can't be blank"
