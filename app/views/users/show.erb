@@ -2,7 +2,7 @@
   <h3><%= @user.username %>'s profile page<h3>
     <h5>Surveys created by <%= @user.username %>:<h5>
     <ul>
-    <% if @surveys_written.nil? %>
+    <% if @surveys_written.empty? %>
       <li>You've written 0 surveys.</li>
     <% else %>
         <% @surveys_written.each do |written| %>
