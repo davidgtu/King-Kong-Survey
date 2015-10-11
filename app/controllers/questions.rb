@@ -28,8 +28,12 @@ post "/surveys/:survey_id/questions" do
   choices = question.choices.new(params[:choice3])
 
     if question.save
-      flash[:success] = "Questions created!"
-      redirect "/surveys/#{@survey.id}/questions/new"
+      if request.xhr?
+        erb :"questions/_new_question", layout: false
+      else
+        flash[:success] = "Questions created!"
+        redirect "/surveys/#{@survey.id}/questions/new"
+      end
     else
       question.valid?
       @errors = question.errors.full_messages
