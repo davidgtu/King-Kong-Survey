@@ -1,22 +1,22 @@
 * {
-    font-family: 'Titillium Web', sans-serif;
-    font-weight: 400;
-    margin: 0;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 400;
+  margin: 0;
 }
 
 html, body {
-    height: 100%;
+  height: 100%;
 }
 
 #nav-bar {
-    background-color: #403E35;
-    color: white;
-    padding: 10px 0px 10px 0px;
+  background-color: #403E35;
+  color: white;
+  padding: 10px 0px 10px 0px;
 }
 
 .center {
-    width: 65%;
-    margin: 0 auto;
+  width: 65%;
+  margin: 0 auto;
 }
 
 #icon {
@@ -29,56 +29,56 @@ html, body {
 }
 
 #nav-bar .header-title {
-    position: relative;
-    font-family: 'Titillium Web', sans-serif;
-    font-weight: 700;
-    color: white;
-    font-size: 2em;
-    text-decoration: none;
-    top: -10px;
+  position: relative;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 2em;
+  text-decoration: none;
+  top: -10px;
 }
 
 #nav-bar ul {
-    font-size: 1.25em;
-    display: inline;
-    float: right;
-    padding: 0px 0px 0px 0px;
-    margin: 15px 0px 0px 0px;
+  font-size: 1.25em;
+  display: inline;
+  float: right;
+  padding: 0px 0px 0px 0px;
+  margin: 15px 0px 0px 0px;
 }
 
 #nav-bar li {
-    color: #403E35;
-    display: inline;
-    background-color: yellow;
-    border-radius: .25em;
-    border: 1px solid #C9C90F;
-    padding: 2px 5px;
-    box-shadow: inset 0px 3px 0px #FDFD9B;
+  color: #403E35;
+  display: inline;
+  background-color: yellow;
+  border-radius: .25em;
+  border: 1px solid #C9C90F;
+  padding: 2px 5px;
+  box-shadow: inset 0px 3px 0px #FDFD9B;
 }
 
 #nav-bar li a {
-    color: #403E35;
-    text-decoration: none;
+  color: #403E35;
+  text-decoration: none;
 }
 
 #content {
-    position: relative;
-    width: 65%;
+  position: relative;
+  width: 65%;
 
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .wrapper {
-    min-height: 100%;
-    height: auto;
-    height: 100%;
-    margin: 0 auto -90px;
+  min-height: 100%;
+  height: auto;
+  height: 100%;
+  margin: 0 auto -90px;
 }
 
 #flash-area {
-  height:5em;
+  height:2em;
   position: relative;
-  width: 15%;
+  width: 30%;
   margin: 0 auto;
   /*padding: 5px 10px 10px 5px;*/
 }
@@ -87,7 +87,7 @@ html, body {
   background-color: #2ECC71;
   padding: 2px 7px 2px 7px;
   display:none;
-  border-radius:25px;
+  border-radius:.25em;
 }
 
 .flash-error {
@@ -102,26 +102,27 @@ html, body {
 }
 
 ul {
-    list-style-type: none;
-    font-size: 1.5em;
+  list-style-type: none;
+  font-size: 1.5em;
+  padding: 0;
 }
 
 footer, .push{
-    height: 90px;
+  height: 90px;
 }
 
 footer {
-    height: 90px;
-    background-color: #CFCFCF;
-    color:  #403E35;
+  height: 90px;
+  background-color: #CFCFCF;
+  color:  #403E35;
 }
 
 footer a {
-    text-decoration: none;
-    color: #403E35;
-    font-weight: 700;
+  text-decoration: none;
+  color: #403E35;
+  font-weight: 700;
 }
 
 #copyright {
-    text-align: center;
+  text-align: center;
 }
