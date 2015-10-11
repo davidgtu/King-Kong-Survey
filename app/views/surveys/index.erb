@@ -2,7 +2,12 @@
   <h3>Take a Survey:</h3>
   <ul>
   <% @surveys.each do |survey| %>
-    <li><a href="/surveys/<%= survey.id %>"><%= survey.title %></a></li>
+    <li>
+      <a href="/surveys/<%= survey.id %>">
+        <h5><%= survey.title %></h5>
+        <p><%= survey.about %></p>
+      </a>
+    </li>
   <% end %>
 
   <% if logged_in? %>
