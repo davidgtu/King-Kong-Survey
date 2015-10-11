@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+
   $(".flash-success").fadeIn('slow', function(){
     $(this).delay(2000).fadeOut('slow')
   })
@@ -8,23 +9,45 @@ $(document).ready(function() {
     $(this).delay(2000).fadeOut('slow')
   })
 
-  var surveyForm = $("#new-survey");
-  surveyForm.on("submit", function(event) {
+  $("#new-survey").on("submit", createSurvey);
+
+  $("#questions").on("submit", ".new-question", addQustionForm);
+
+});
+
+
+function createSurvey(event) {
+
     event.preventDefault();
     var url = $(this).attr("action");
     var type = $(this).attr("method");
     var data = $(this).serialize();
-    debugger;
     $.ajax({
       url: url,
       type: type,
       data: data
     })
-    .done(function(data) {
-      $("#survey").append(data);
-      debugger;
+    .done(function(result) {
+      $("#questions").append(result);
     })
     .fail();
-  } );
 
-});
+}
+
+function addQustionForm(event) {
+    event.preventDefault();
+    var url = $(this).attr("action");
+    var type = $(this).attr("method");
+    var data = $(this).serialize();
+    $.ajax({
+      url: url,
+      type: type,
+      data: data
+    })
+  .done(function(result) {
+    $(".new-question").remove();
+    $("#questions").append(result);
+  })
+  .fail();
+}
+
