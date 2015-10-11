@@ -1,20 +1,29 @@
 <div>
   <h3>Take a Survey:</h3>
   <ul>
-  <% @surveys.each do |survey| %>
-    <li>
-      <a href="/surveys/<%= survey.id %>">
-        <h5><%= survey.title %></h5>
-        <p><%= survey.about %></p>
-      </a>
-    </li>
-  <% end %>
+    <% @surveys.each do |survey| %>
+      <li class="survey-list">
+        <a href="/surveys/<%= survey.id %>">
+          <h5><%= survey.title %></h5>
+          <p>Description: <%= survey.about %></p>
+          <button class="survey-btn">Take Survey</button>
+        </a>
+      </li>
+    <% end %>
 
-  <% if logged_in? %>
-    <li><a href='/surveys/new'>Create survey</a><li>
-  <% else %>
-    <li><a href='/register'>Create survey</a><li>
-  <% end %>
-</ul>
+    <% if logged_in? %>
+      <li class="survey-list">
+        <a href='/surveys/new'>
+          <%= erb :"surveys/_create_survey" %>
+        </a>
+      <li>
+    <% else %>
+      <li class="survey-list">
+        <a href='/register'>
+          <%= erb :"surveys/_create_survey" %>
+        </a>
+      <li>
+    <% end %>
+  </ul>
 </div>
 
