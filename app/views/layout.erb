@@ -35,18 +35,23 @@
       </div>
     </div>
     <div id="content">
-      <div id="flash-area">
-      <% if flash[:success] %>
-        <div class="flash-success">
-          <h4 class="flash-text"><%= flash[:success] %></h4>
+
+      <div id="main-content">
+        <div id="flash-area">
+          <% if flash[:success] %>
+            <div class="flash-success">
+              <h4 class="flash-text"><%= flash[:success] %></h4>
+            </div>
+          <% elsif flash[:error] %>
+            <div class="flash-error">
+              <h4 class="flash-text"><%= flash[:error] %></h4>
+            </div>
+          <% end %>
         </div>
-      <% elsif flash[:error] %>
-        <div class="flash-error">
-          <h4 class="flash-text"><%= flash[:error] %></h4>
-        </div>
-      <% end %>
-    </div>
-      <%= yield %>
+
+        <%= yield %>
+      </div>
+
       <div class="push"></div>
     </div>
   </div>
