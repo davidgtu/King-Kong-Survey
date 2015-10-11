@@ -1,3 +1,4 @@
+<div id="survey">
 <h3>Make a New Survey:</h3>
 <form id="new-survey" method="post" action="/surveys">
     <label for="title">Title:</label></br>
@@ -6,3 +7,9 @@
     <textarea id="about" name="survey[about]"><%= @survey.about %></textarea></br>
     <input type="submit" value="Make New Survey">
 </form>
+</div>
+<div id="finished">
+<% if @survey.questions.count > 0 %>
+  <a href="/">Finished</a>
+<% end %>
+</div>
