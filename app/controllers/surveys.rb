@@ -22,12 +22,15 @@ end
 post "/surveys" do
   @survey = Survey.new(params[:survey])
   @survey.author_id = current_user.id
-
   if @survey.save!
-    redirect "/surveys/#{@survey.id}/questions/new"
+      if request.xhr?
+        erb :"questions/_new_question", layout: false
+      else
+        redirect "/surveys/#{@survey.id}/questions/new"
+      end
   else
-    @survey.valid? #--> need to call this to get messages for some reason
-    @errors = @survey.errors.full_messages
+      @survey.valid? #--> need to call this to get messages for some reason
+      @errors = @survey.errors.full_messages
   end
 end
 
