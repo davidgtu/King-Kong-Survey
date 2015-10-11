@@ -1,4 +1,4 @@
-<h3>Stats for your quiz: <%= @survey.title %></h3>
+<h3>Survey Stats for: <%= @survey.title %></h3>
 <% @survey.questions.each do |question| %><br><br>
   <%= question.prompt %><br>
   <% question.choices.each do |choice| %><br>
