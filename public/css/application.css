@@ -4,6 +4,11 @@
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 html, body {
   height: 100%;
 }
@@ -79,9 +84,15 @@ html, body {
 }
 
 #content h5 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+#content .survey-list h5 {
   margin: 10px 15px 0px 15px;
   font-size: 1.5em;
   font-weight: 700;
+  clear:both;
 }
 
 .survey-list {
@@ -105,7 +116,7 @@ html, body {
   color: white;
   width: 40%;
   margin: 5px 15px;
-  background-color: #4ABEE2;
+  background-color: #2BB8E4;
   border-radius: .25em;
   border: 1px solid #3391AE;
   padding: 2px 5px;
@@ -123,9 +134,51 @@ html, body {
   box-shadow: inset 0px 3px 0px #FC7084;
 }
 
+.submit-btn {
+  color: white;
+  width: 15%;
+  margin: 15px 0px;
+  background-color: #2BB8E4;
+  border-radius: .25em;
+  border: 1px solid #3391AE;
+  padding: 2px 5px;
+  box-shadow: inset 0px 3px 0px #80D2EC;
+}
+
+input {
+  margin: 5px 0px;
+}
+
 #content li a {
   color: #403E35;
   text-decoration: none;
+}
+
+#content .user-surveys {
+  width: 50%;
+  height: 90px;
+  margin: 0px 15px 15px 0px;
+  background-color: white;
+  border-radius: .25em;
+  border: 1px solid #FAFAFA;
+  padding: 0px 0px 0px 30px;
+  font-size: .75em;
+  box-shadow: 0px 2px 5px #CFCFCF;
+}
+
+
+#content .user-surveys a {
+  font-size: 1.5em;
+  font-weight: 700;
+  position: relative;
+  top: 15px;
+  color: #403E35;
+  text-decoration: none;
+}
+
+#content .user-surveys a:hover {
+  color: #2BB8E4;
+  font-weight: 700;
 }
 
 #content ul {
@@ -143,27 +196,28 @@ html, body {
 }
 
 #flash-area {
-  height:2em;
+  height: 3em;
   position: relative;
   width: 30%;
   margin: 0 auto;
+  padding: 2px 7px 2px 7px;
   /*padding: 5px 10px 10px 5px;*/
 }
 
 .flash-success {
   background-color: #2ECC71;
   margin-top: 15px;
-  padding: 2px 7px 2px 7px;
   display:none;
   border-radius:.25em;
+  text-align: center;
 }
 
 .flash-error {
   background-color: #F22613;
   margin-top: 15px;
-  padding: 2px 7px 2px 7px;
   display: none;
   border-radius:.25em;
+  text-align: center;
 }
 
 .flash-text {
