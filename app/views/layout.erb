@@ -35,6 +35,7 @@
       </div>
     </div>
     <div id="content">
+      <div id="flash-area">
       <% if flash[:success] %>
         <div class="flash-success">
           <h4 class="flash-text"><%= flash[:success] %></h4>
@@ -44,6 +45,7 @@
           <h4 class="flash-text"><%= flash[:error] %></h4>
         </div>
       <% end %>
+    </div>
       <%= yield %>
       <div class="push"></div>
     </div>
