@@ -1,6 +1,4 @@
 $(document).ready(function() {
-
-
   $(".flash-success").fadeIn('slow', function(){
     $(this).delay(2000).fadeOut('slow')
   })
@@ -12,6 +10,16 @@ $(document).ready(function() {
   $("#new-survey").on("submit", createSurvey);
 
   $("#questions").on("submit", '.new-question', saveQuestion);
+
+  $("#user-signup").on('click', function(e){
+    e.preventDefault();
+
+    $.ajax({
+      url: '/login'
+    }).done(function(data){
+      console.log(data)
+    })
+  })
 
 });
 
@@ -64,4 +72,3 @@ function addQuestionForm(result) {
   $(".new-question").remove();
   $("#questions").append(result);
 }
-
