@@ -1,9 +1,2 @@
-<h2>Sign up!</h2>
-<form action="/users" method="post">
-  <label for="username">Username:</label><br>
-  <input type="text" name="user[username]"/><br>
-  <label for="password">Password:</label><br>
-  <input type="password" name="user[password]" required=true ><br>
-  <input class="submit-btn" type="submit" value="Create Account!"/><br>
-</form>
+<%= erb :'/users/_user_signup_form' %>
 <%= erb :_gorilla_big %>
