@@ -281,6 +281,15 @@ input {
 .flash-text {
   color: #fff
 }
+
+#user-signup, #user-login {
+  font-weight: bold;
+}
+
+#user-signup:hover, #user-login:hover {
+  color:#6C7A89
+}
+
 /*---  Footer Stuff ---*/
 footer, .push{
   height: 90px;
