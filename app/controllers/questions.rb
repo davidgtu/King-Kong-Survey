@@ -35,11 +35,15 @@ post "/surveys/:survey_id/questions" do
         redirect "/surveys/#{@survey.id}/questions/new"
       end
     else
-      question.valid?
-      @errors = question.errors.full_messages
-      @errors.each do |error|
-        flash[:error] = "Field(s) can't be blank"
+      if request.xhr?
+        redirect "/406"
+      else
+        question.valid?
+        @errors = question.errors.full_messages
+        @errors.each do |error|
+            flash[:error] = "#{error}"
+        erb :"questions/new"
+        end
       end
-      erb :"questions/new"
     end
 end
