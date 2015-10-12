@@ -49,36 +49,36 @@ html, body {
 }
 
 #nav-bar ul {
-  font-size: 1.25em;
-  display: inline;
   float: right;
-  padding: 0px 0px 0px 0px;
-  margin: 15px 0px 0px 0px;
+  margin-top: 10px;
 }
 
 #nav-bar li {
   color: #403E35;
   display: inline;
   background-color: yellow;
-  border-radius: .25em;
+  border-radius: .15em;
   border: 1px solid #C9C90F;
-  padding: 2px 5px;
+  /*padding: 2px 5px;*/
   box-shadow: inset 0px 3px 0px #FDFD9B;
+  margin-right: 5px;
 }
 
 #nav-bar li a {
   color: #403E35;
   text-decoration: none;
+  width: 50px;
+  text-align: center;
+  padding: 15px;
 }
 
 
 /*---  Main Content ---*/
 
 #gorilla {
-  position: absolute;
-  float: right;
-  display: block;
-  left: 75%;
+  position: fixed;
+  bottom: 90px;
+  left: 70%;
 }
 
 #content {
