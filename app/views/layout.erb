@@ -6,6 +6,9 @@
     differences in how form elements appear between Firefox and IE
     See: http://necolas.github.com/normalize.css/
   -->
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
   <link rel="stylesheet" href="/css/normalize.css">
   <!--
     application.css is where you put your styles
@@ -21,7 +24,7 @@
   <div class="wrapper">
     <div id="nav-bar">
       <div class="center">
-        <a href="/"> <img id="icon" src="/imgs/gorilla_icon.gif"/><p class="header-title">King Kong Survey</p></a>
+        <a href="/"> <img id="icon" src="/imgs/gorilla-new-icon.png"/><p class="header-title">King Kong Survey</p></a>
         <ul>
           <% if logged_in? %>
             <li><a href="/users/<%= current_user.id %>">Your Profile</a></li>
