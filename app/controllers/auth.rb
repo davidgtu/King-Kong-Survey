@@ -1,7 +1,7 @@
 get '/register' do
   @user = User.new
   if request.xhr?
-    erb :'/users/_user_signup_form', locals: false
+    erb :'/users/_user_login_form', layout: false
   else
     erb :'/users/new'
   end
@@ -23,7 +23,7 @@ end
 get '/login' do
   @user = User.new
   if request.xhr?
-    erb :'/users/_user_login_form', locals: false
+    erb :'/users/_user_signup_form', layout: false
   else
     erb :'/users/login'
   end
