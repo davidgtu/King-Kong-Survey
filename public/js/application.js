@@ -11,12 +11,13 @@ $(document).ready(function() {
     e.preventDefault();
 
     $.ajax({
-      url: '/login'
+      url: '/register'
     }).done(function(data){
-      console.log(data)
+      $("h4, #user-signup").hide()
+      $('#login-container').html(data)
     })
   })
-  
+
   $("#new-survey").on("submit", createSurvey);
 
   $("#questions").on("submit", '.new-question', saveQuestion);
