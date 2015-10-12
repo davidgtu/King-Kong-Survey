@@ -15,6 +15,8 @@ $(document).ready(function() {
 
 });
 
+var errors = "<p class='warning' >Warning! You have missing field(s).</p>"
+
 function createSurvey(event) {
   event.preventDefault();
   var url = $(this).attr("action");
@@ -26,10 +28,14 @@ function createSurvey(event) {
     data: data
   })
   .done(function(result) {
+    $(".warning").remove();
     $("#survey-submit-btn").remove();
     $("#questions").append(result);
   })
-  .fail();
+  .fail(function() {
+    $(".warning").remove();
+    $("#errors").append(errors)
+  });
 }
 
 function saveQuestion(event) {
@@ -46,11 +52,15 @@ function saveQuestion(event) {
   .done(function(result) {
     addQuestionForm(result);
   })
-  .fail();
+  .fail(function() {
+    $(".warning").remove();
+    $("#errors").append(errors)
+  });
 }
 
 
 function addQuestionForm(result) {
+  $(".warning").remove();
   $(".new-question").remove();
   $("#questions").append(result);
 }
