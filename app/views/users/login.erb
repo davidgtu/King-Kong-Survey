@@ -1,9 +1,2 @@
-<h2>Log into King Kong</h2>
-<form action="/login" method="post">
-  <label for="username">Username:</label><br>
-  <input type="text" name="user[username]"/><br>
-  <label for="password">Password:</label><br>
-  <input type="password" name="user[password]"/><br>
-  <input class="submit-btn" type="submit" value="Log In"/>
-</form>
+<%= erb :'/users/_user_login_form' %>
 <%= erb :_gorilla_big %>
