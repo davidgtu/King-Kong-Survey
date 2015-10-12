@@ -25,12 +25,9 @@ html, body {
 }
 
 #icon {
-    width: 45px;
-    height: 45px;
     border-radius: 100%;
     margin-top: 5px;
     margin-right: 15px;
-    border: 2px solid white;
 }
 #nav-bar a {
   text-decoration: none;
@@ -71,6 +68,12 @@ html, body {
 
 
 /*---  Main Content ---*/
+
+#gorilla {
+  position: absolute;
+  display: block;
+  left: 75%;
+}
 
 #content {
   position: relative;
@@ -119,7 +122,7 @@ html, body {
 
 .survey-btn {
   color: white;
-  width: 40%;
+  width: 50%;
   margin: 5px 15px;
   background-color: #2BB8E4;
   border-radius: .25em;
@@ -136,7 +139,7 @@ html, body {
 
 .create-btn {
   color: #FFFFFF;
-  width: 40%;
+  width: 50%;
   margin: 5px 15px;
   background-color: #FF4963;
   border-radius: .25em;
@@ -292,6 +295,7 @@ footer a {
 }
 
 #copyright {
+  clear: both;
   padding-top: 15px;
   text-align: center;
 }
