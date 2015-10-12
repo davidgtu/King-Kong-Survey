@@ -7,10 +7,6 @@ $(document).ready(function() {
     $(this).delay(2000).fadeOut('slow')
   })
 
-  $("#new-survey").on("submit", createSurvey);
-
-  $("#questions").on("submit", '.new-question', saveQuestion);
-
   $("#user-signup").on('click', function(e){
     e.preventDefault();
 
@@ -20,6 +16,11 @@ $(document).ready(function() {
       console.log(data)
     })
   })
+  
+  $("#new-survey").on("submit", createSurvey);
+
+  $("#questions").on("submit", '.new-question', saveQuestion);
+
 
 });
 
