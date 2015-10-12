@@ -1,6 +1,4 @@
 $(document).ready(function() {
-
-
   $(".flash-success").fadeIn('slow', function(){
     $(this).delay(2000).fadeOut('slow')
   })
@@ -9,9 +7,32 @@ $(document).ready(function() {
     $(this).delay(2000).fadeOut('slow')
   })
 
+  $("#user-signup").on('click', function(e){
+    e.preventDefault();
+
+    $.ajax({
+      url: '/register'
+    }).done(function(data){
+      $("h4, #user-signup").hide()
+      $('#login-container').html(data)
+    })
+  })
+
+  $("#user-login").on('click', function(e){
+    e.preventDefault();
+
+    $.ajax({
+      url: '/login'
+    }).done(function(data){
+      $("h4, #user-login").hide()
+      $('#signup-container').html(data)
+    })
+  })
+
   $("#new-survey").on("submit", createSurvey);
 
   $("#questions").on("submit", '.new-question', saveQuestion);
+
 
 });
 
@@ -64,4 +85,3 @@ function addQuestionForm(result) {
   $(".new-question").remove();
   $("#questions").append(result);
 }
-

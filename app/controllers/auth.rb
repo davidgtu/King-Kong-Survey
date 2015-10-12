@@ -1,6 +1,10 @@
 get '/register' do
   @user = User.new
-  erb :'/users/new'
+  if request.xhr?
+    erb :'/users/_user_signup_form', layout: false
+  else
+    erb :'/users/new'
+  end
 end
 
 post '/users' do
@@ -18,7 +22,11 @@ end
 
 get '/login' do
   @user = User.new
-  erb :'/users/login'
+  if request.xhr?
+    erb :'/users/_user_login_form', layout: false
+  else
+    erb :'/users/login'
+  end
 end
 
 post '/login' do

@@ -29,6 +29,7 @@ post "/surveys/:survey_id/questions" do
 
     if question.save
       if request.xhr?
+        flash[:success] = "Questions created!"
         erb :"questions/_new_question_finish", layout: false
       else
         flash[:success] = "Questions created!"
