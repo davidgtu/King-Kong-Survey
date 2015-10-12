@@ -18,6 +18,17 @@ $(document).ready(function() {
     })
   })
 
+  $("#user-login").on('click', function(e){
+    e.preventDefault();
+
+    $.ajax({
+      url: '/login'
+    }).done(function(data){
+      $("h4, #user-login").hide()
+      $('#signup-container').html(data)
+    })
+  })
+
   $("#new-survey").on("submit", createSurvey);
 
   $("#questions").on("submit", '.new-question', saveQuestion);
