@@ -75,6 +75,7 @@ html, body {
 
 #gorilla {
   position: absolute;
+  float: right;
   display: block;
   left: 75%;
 }
