@@ -1,9 +1,12 @@
+<div id="errors">
+  <%= erb :"_errors_display" %>
+</div>
 <div id="survey">
   <h3>Make a New Survey:</h3>
   <form id="new-survey" method="post" action="/surveys">
       <label for="title">Title:</label></br>
       <input id="title" name="survey[title]" value="<%= @survey.title %>"></input></br>
-      <label for="about">Description:</label></br>
+      <label for="about">About:</label></br>
       <textarea id="about" name="survey[about]"><%= @survey.about %></textarea></br>
       <input class="submit-btn" id="survey-submit-btn" type="submit" value="Create New Survey">
   </form>
